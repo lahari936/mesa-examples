@@ -96,6 +96,13 @@ inspired loosely from the game Plague Inc, though the goal here is containment r
 compliance rates at the population level affect outbreak dynamics,
 analyzing changes in infection, death and immunity rates.
 
+### [Energy Expenditure Model](https://github.com/mesa/mesa-examples/tree/main/examples/energy_expenditure)
+
+A minimal model of needs-based behavior. Every step costs an agent energy and
+moving costs more, so agents switch to resting once their reserve runs low and
+are removed when it reaches zero. Shows a behavioral switch driven purely by an
+agent's own internal state.
+
 
 ## Continuous Space Examples
 _No user examples available yet._
