@@ -102,7 +102,11 @@ class VirusAntibodyModel(Model):
         )
 
         # Create and place the Virus agents
-        dna = [self.random.randint(0, 9) for _ in range(3)]
+        # Every virus starts from the same strain, but each needs its own dna
+        # list: generate_dna() works on the list it is handed, so one shared
+        # list would make the whole population mutate together.
+        strain = [self.random.randint(0, 9) for _ in range(3)]
+        dna = [strain.copy() for _ in range(self.initial_viruses)]
         viruses_positions = self.rng.random(size=(self.initial_viruses, 2)) * np.array(
             self.space.size
         )
