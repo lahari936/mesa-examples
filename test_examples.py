@@ -16,7 +16,7 @@ def get_models(directory):
 
                 try:
                     module = importlib.import_module(module_name)
-                except Exception as exc:  # noqa: BLE001
+                except Exception as exc:
                     # Report an unimportable example as one failing test. Raising
                     # here would abort collection for the whole file, so a single
                     # broken import would hide every other example's result.
